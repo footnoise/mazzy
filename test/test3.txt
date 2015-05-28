@@ -1,0 +1,30 @@
+MD Dir1
+MD Dir1\Dir2
+CD Dir1\Dir2
+MF file2.dat
+MD Dir3
+CD Dir3
+MF file3.dat
+MD Dir4
+CD Dir4
+MF file4.dat
+MD Dir5
+CD Dir5
+MF file5.dat
+CD C:
+DELTREE Dir1
+MD Dir2
+CD Dir2
+MF b.txt
+MF a.txt
+CD C:
+MD Dir3
+MD C:\A
+MD C:\Z
+MD C:\X
+MD C:\G
+MD C:\Y
+MD C:\Mir3
+MD C:\I
+COPY Dir2 Dir3 
+

@@ -1,0 +1,9 @@
+MD Dir1
+MD Dir1\Dir2
+CD Dir1
+MD Dir4
+MD Dir5
+MD Dir2\Dir3
+MF Dir2\Dir5\readme.txt
+CD Dir4
+MF temp.dat

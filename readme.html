@@ -1,0 +1,149 @@
+<html>
+<head>
+<title>Mazzy (File Manager Emulator)</title>
+<style>
+body, p, table, tr, td {font-family:Arial, Tahoma; font-size: 11 px;}
+div.obj {border: 1px solid #000000; padding: 5px; margin: 5px; background-color:#ffffff;}
+</style>
+</head>
+<body>
+<h1>Mazzy (File Manager Emulator)</h1>
+<hr>
+<h2>What is it?</h2>
+<p>File Manager Emulator (FME) emulates the details of creating, removing, copying and moving
+files and directories. It also handles commands related to these file management tasks. FME shall be
+capable to read and execute a batch file with different kind of commands. After the batch file execution
+it shall generate and print out formatted directory structure or an error message if something went
+wrong to standard output. Note that program should do nothing with the real file structure on local hard
+drives and shall only emulate these activities.</p>
+
+<h2>Structure</h2>
+<p>Namespaceses and basic objects structure</p>
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#000000">
+<tr bgcolor="#ffffff">
+<td valign="top"><h3>Mazzy</h3>
+<table width="100%" valign="top">
+<tr valign="top">
+<td width="33%">
+<div class="obj">Cmd</div>
+<div class="obj">Parser</div>
+<div class="obj">Display</div>
+<td width="34%" valign="top">
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#000000">
+<tr bgcolor="#c0c0c0" valign="top">
+<td>
+<h3>Command</h3>
+<div class="obj">MakeDir</div>
+<div class="obj">ChangeDir</div>
+<div class="obj">RemoveDir</div>
+<div class="obj">MakeFile</div>
+<div class="obj">DelTree</div>
+<div class="obj">Del</div>
+<div class="obj">Copy</div>
+<div class="obj">Move</div>
+<div class="obj">MakeHardLink</div>
+<div class="obj">MakeDynLink</div>
+</td>
+</tr>
+</table>
+</td>
+<td width="33%" valign="top">
+<table width="100%" border="0" cellpadding="5" cellspacing="1" bgcolor="#000000">
+<tr bgcolor="#7da7d8" valign="top">
+<td><h3>FS</h3>
+<div class="obj">Path</div>
+<div class="obj">FileSystem</div>
+<div class="obj">Object</div>
+<div class="obj">Dir</div>
+<div class="obj">File</div>
+<div class="obj">HLink</div>
+<div class="obj">DLink</div>
+</td>
+</tr>
+</table>
+</td></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<p>Simple object structure in memory.</p>
+<p>For example, we have path like <b><i>C:\mazzy\mazzy.cpp</i></b> , Mazzy store in memory next data structure:
+
+<table align="center">
+<tr>
+<td>
+<table border="0" cellpadding="5" cellspacing="1" bgcolor="#000000">
+<tr bgcolor="#7da7d8">
+<td colspan="2" align="center"><b>Dir (Object)</b></td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Name</td><td>C:</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Type</td><td>DIR</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Childs</td><td>[0]&nbsp;&raquo;&nbsp;&raquo;&nbsp;&raquo;</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>0&nbsp;&laquo;&nbsp;&laquo;&nbsp;&laquo;&nbsp;</td>
+<td>Parent</td>
+</tr>
+</table>
+</td>
+<td><table border="0" cellpadding="5" cellspacing="1" bgcolor="#000000">
+<tr bgcolor="#7da7d8">
+<td colspan="2" align="center"><b>Dir (Object)</b></td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Name</td><td>mazzy</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Type</td><td>DIR</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Childs</td><td>[0]&nbsp;&raquo;&nbsp;&raquo;&nbsp;&raquo;</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>&laquo;&nbsp;&laquo;&nbsp;&laquo;&nbsp;</td>
+<td>Parent</td>
+</tr>
+</table></td>
+<td><table border="0" cellpadding="5" cellspacing="1" bgcolor="#000000">
+<tr bgcolor="#7da7d8">
+<td colspan="2" align="center"><b>File (Object)</b></td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Name</td><td>mazzy.cpp</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Type</td><td>FILE</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>Childs</td><td>empty</td>
+</tr>
+<tr bgcolor="#ffffff">
+<td>&laquo;&nbsp;&laquo;&nbsp;&laquo;&nbsp;</td>
+<td>Parent</td>
+</tr>
+</table></td>
+</tr>
+</table>
+<p>Design patterns used:</p>
+
+<ol>
+<li><a href="http://en.wikipedia.org/wiki/Singleton_pattern">Singleton</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Composite_pattern">Composite</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Command_pattern">Command</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Fa%C3%A7ade_pattern">Facade</a></li>
+</ol>
+<h2>Using</h2>
+<ol>
+<li>Compile:<br/>
+just run <b>g++ mazzy.cpp -o mazzy</b> or run <b>make</b></li>
+<li>Run batch files:<br>
+<b>mazzy < batch.file</b></li>
+</ol>
+</body>
+</html>

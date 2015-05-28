@@ -1,0 +1,7 @@
+MD Dir1
+MD Dir1
+MD C:\Dir1
+md C:\dir1\dir2
+mf C:\dir1\dir2\test.txt
+MdL C:\Dir1\dir2\test.txt C:\dir1
+MhL C:\Dir1\dir2 C:\dir1

@@ -1,0 +1,6 @@
+md test
+md test\test2
+move C:\test\test2 C:\
+move C:\test C:\test2
+md test2\test\test3
+move C:\test2\test C:\

@@ -1,0 +1,10 @@
+md test
+mf test\test.cpp
+mhl C:\test\test.cpp C:\
+md test\test3
+mf test\test3\test.cpp
+mdl C:\test\test3\test.cpp C:\
+md C:\test\test4
+md C:\test5
+move C:\test C:\test5
+move C:\test\test3 C:\test\test4

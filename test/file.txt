@@ -1,0 +1,8 @@
+md mazzy
+mf mazzy\mazzy.cpp
+del mazzy\mazzy.cpp
+mf mazzy\mazzy2.cpp
+mhl mazzy\mazzy2.cpp C:\mazzy
+mf mazzy\mazzy3.cpp
+mdl mazzy\mazzy3.cpp C:\
+del mazzy\mazzy3.cpp
