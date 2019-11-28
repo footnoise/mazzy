@@ -1,7 +1,5 @@
 # Mazzy (File Manager Emulator)
 
-* * *
-
 *As I remember, this code was written in 2006*
 
 ## What is it?
@@ -130,7 +128,7 @@ Namespaceses and basic objects structure
 
 Simple object structure in memory.
 
-For example, we have path like **_C:\mazzy\mazzy.cpp_** , Mazzy store in memory next data structure:
+For example, if we have path like **_C:\mazzy\mazzy.cpp_**  Mazzy will store in memory the next data structure:
 
 <table align="center">
 
@@ -294,7 +292,7 @@ For example, we have path like **_C:\mazzy\mazzy.cpp_** , Mazzy store in memory 
 
 </table>
 
-Design patterns used:
+## Design patterns used
 
 1.  [Singleton](http://en.wikipedia.org/wiki/Singleton_pattern)
 2.  [Composite](http://en.wikipedia.org/wiki/Composite_pattern)
